@@ -1,8 +1,8 @@
 
 
-void kernel_entry(void* mbd, unsigned int magic)
-{
-    unsigned char *videoram = (unsigned char *) 0xb8000;
+void 
+kernel_entry(void* mbd, unsigned int magic) {
+    unsigned char *video_ram = (unsigned char *) 0xb8000;
     char str[]="hello world";
     int i;
 
@@ -10,7 +10,7 @@ void kernel_entry(void* mbd, unsigned int magic)
     }
 
     for (i=0; i < sizeof(str); ++i) {
-        videoram[i*2] = str[i];
-        videoram[1] = 0x07;
+        video_ram[i*2] = str[i];
+        video_ram[1] = 0x07;
     }
 }
