@@ -1,0 +1,13 @@
+cpu: count=1:1:1, ips=40000000, model=core2_penryn_t9600, reset_on_triple_fault=1, cpuid_limit_winnt=0, ignore_bad_msrs=1, mwait_is_nop=0
+
+memory: guest=2048M, host=1024M
+
+ata0-slave: type=cdrom, path=f:\slacko-6.3.2-uefi.iso, status=inserted
+
+ata0-master: type=disk, mode=flat, path=C:\Users\htc\Desktop\env\c.img
+
+boot: disk
+
+#com1: enabled=1, mode=term, dev=/dev/ttyS0
+
+#parport1: enabled=1, file="/dev/lp0"
